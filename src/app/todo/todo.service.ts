@@ -29,7 +29,7 @@ export class TodoService {
 
   async findOneOrFail(id: string) {
     try {
-      return await this.todoRepository.findOneByOrFail({ id });
+      return await this.todoRepository.findOneByOrFail({ id: id });
     } catch (error) {
       throw new NotFoundException(error.message);
     }

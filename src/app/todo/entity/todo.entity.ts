@@ -21,4 +21,13 @@ export default class TodoEntity {
   deletedAt: string;
   @UpdateDateColumn({ name: 'updated_at' })
   updatedAt: string;
+
+  constructor(todo?: Partial<TodoEntity>) {
+    this.id = todo?.id;
+    this.task = todo?.task;
+    this.isDone = todo?.isDone;
+    this.createdAt = todo?.createdAt;
+    this.updatedAt = todo?.updatedAt;
+    this.deletedAt = todo?.deletedAt;
+  }
 }

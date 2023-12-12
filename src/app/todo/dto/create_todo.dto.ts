@@ -4,5 +4,5 @@ export default class CreateTodoDto {
   @IsNotEmpty()
   task: string;
   @IsNotEmpty()
-  isDone: string;
+  isDone: boolean;
 }
